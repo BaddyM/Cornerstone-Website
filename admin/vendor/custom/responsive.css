@@ -1,0 +1,47 @@
+@media (max-width:569px){
+    /*------------------------------- nav bar -------------------------------*/
+    .nav-bar{
+        display: block;
+    }
+    .top-header{
+        display: inline-block;
+        text-align: center;
+    }
+    .top-header h5{
+        display: inline-block;
+        font-size: 14px;
+        text-align: center;
+    }
+    .school-name{
+        font-size: 20px;
+        text-align: center;
+    }
+    #nav-elements{
+        display: none;
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    .menu i{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .brand{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-elements li{
+        padding-right: 0;
+    }
+    #hover-nav{
+        display: inline-block;
+    }
+    #hover-nav2{
+        display: inline-block;
+    }
+    /*----------------------------- swiper -----------------------------------*/
+    .swiper-slide img{
+        height: 350px;
+    }
+}

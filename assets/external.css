@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#brandtitle {}
+
+#myCarousel img {
+    width: 100%;
+    height: 500px;
+}
+
+.schoolbadge {
+    width: 100px;
+}
+
+#accordion {
+    max-width: 30rem;
+}
+
+#calender_mission {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-horizantal-line {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#footer-content {
+    background: rgb(236, 236, 236);
+    padding: 3%;
+}
+
+#header-2 {
+    font-size: 15px;
+    padding: 5px;
+}
+
+#index-sec1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#location-horizontal {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#map-iframe {
+    width: 600px;
+    height: 450px;
+    margin-bottom: 40px;
+}
+
+#index-sec-img {
+    height: 250px;
+}
+
+#index-bottom {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#index-bottom img {
+    width: 100%;
+    height: 250px;
+
+}
+
+/*------------------- Swiper ----------------------*/
+.swiper-wrapper {
+    display: flex;
+    margin: 8px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 550px;
+}
+
+/*---------------------------- School --------------------------------*/
+.school_header img {
+    width: 100%;
+    height: 600px;
+}
+
+.school_header_underline {}
+
+.school-sec1 {
+    display: flex;
+}
+
+.school-sec1 img {
+    width: 50%;
+    height: 400px;
+}
+
+.school-sec1 span {
+    background: rgb(43, 43, 97);
+    color: white;
+    width: 50%;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/*---------------------- font style -designs ---------------------------*/
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+.school_header_text {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+@font-palette-values --Grays {
+    font-family: Rocher;
+    base-palette: 9;
+}
+
+@font-palette-values --Purples {
+    font-family: Rocher;
+    base-palette: 6;
+}
+
+@font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+}
+
+.grays {
+    font-palette: --Grays;
+}
+
+.purples {
+    font-palette: --Purples;
+}
+
+.mint {
+    font-palette: --Mint;
+}
+
+/*---------------------------------------- ABOUT ----------------------------*/
+#about-heading {
+    font-family: "Playball", sans-serif;
+
+}
+
+#about-text {
+    font-family: 'Times New Roman';
+    font-style: italic;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/*--------------- Loader css -----------------------------*/
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid;
+    color: #3498db;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+    25% {
+        color: #2ecc71;
+    }
+
+    50% {
+        color: #f1c40f;
+    }
+
+    75% {
+        color: #e74c3c;
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*-------------------------- RESPONSIVENESS --------------------------------*/
+@media only screen and (max-width: 600px) {
+    #myCarousel img {
+        width: 100%;
+        height: 300px;
+    }
+
+    #calender_mission {
+        display: block;
+    }
+
+    #accordion {
+        margin-top: 40px;
+    }
+
+    #header-2 {
+        width: 100%;
+        font-size: 12px;
+
+    }
+
+    #index-sec1 {
+        display: block;
+    }
+
+    #index-sec1-card {
+        margin-top: 50px;
+    }
+
+    #location-horizontal {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #map-iframe {
+        width: 100%;
+    }
+
+    #index-bottom {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #index-bottom img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .school_header img {
+        height: 300px;
+    }
+
+    .school-sec1 {
+        display: flex;
+    }
+
+    .school-sec1 img {
+        width: 50%;
+        height: 200px;
+    }
+
+    .school-sec1 span {
+        background: rgb(43, 43, 97);
+        color: white;
+        width: 50%;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 10px;
+    }
+
+    #about-text {
+        margin: 0;
+    }
+
+    .swiper-slide img {
+        height: 300px;
+    }
+
+}
