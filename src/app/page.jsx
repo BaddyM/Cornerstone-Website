@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 var carousel = [
   "DSC01988.jpg",
@@ -16,20 +17,20 @@ var carousel = [
 ];
 
 var messagesImages = [
-    "PHOTO-2024-04-05-11-38-04.png",
-    "PHOTO-2022-08-09-07-51-21.png",
-    "IMG-20241112-WA0105.jpg",
-    "PHOTO-2024-11-19-15-43-14.jpg",
-    "IMG-20241105-WA0216.jpg"
+  "PHOTO-2024-04-05-11-38-04.png",
+  "PHOTO-2022-08-09-07-51-21.png",
+  "IMG-20241112-WA0105.jpg",
+  "PHOTO-2024-11-19-15-43-14.jpg",
+  "IMG-20241105-WA0216.jpg",
 ];
 
 var messagesLabels = [
-    "Founding Director",
-    "Managing Director",
-    "Head Teacher",
-    "Deputy Headteacher",
-    "Director of Studies"
-]
+  "Founding Director",
+  "Managing Director",
+  "Head Teacher",
+  "Deputy Headteacher",
+  "Director of Studies",
+];
 
 export default function Page() {
   useEffect(() => {
@@ -88,16 +89,30 @@ export default function Page() {
       </div>
       {/*---------------- Swiper ---------------------------*/}
 
-      <div className="bg-white row justify-content-start my-3 w-100">
-        {messagesLabels.map((e)=>(
-            <div key={messagesLabels.indexOf(e)} className="col-md-3 mb-4">
-                <div className="card shadow-sm border-0">
-                <Image width={'100%'} height={'400'} className="img-fluid text-center" objectFit="contain" alt={`${e}`} src={require(`../../public/images/messages/${messagesImages[messagesLabels.indexOf(e)]}`)} />
-                <div className="card-body">
-                    
+      <div className="bg-white row justify-content-around my-3 py-3 w-100">
+        {messagesLabels.map((e) => (
+          <div key={messagesLabels.indexOf(e)} className="col-md-2 mb-4">
+            <div className="card shadow border-0">
+                <p className="mb-2 text-center p-1">{messagesLabels[messagesLabels.indexOf(e)]}</p>
+              <div className="text-center pt-2">
+                <Image
+                  width={"100%"}
+                  height={"300"}
+                  className="img-fluid text-center"
+                  objectFit="contain"
+                  alt={`${e}`}
+                  src={require(`../../public/images/messages/${
+                    messagesImages[messagesLabels.indexOf(e)]
+                  }`)}
+                />
+              </div>
+              <div className="card-body">
+                <div className="text-center">
+                    <Link href={`/messages/${e}`} className="btn btn-primary w-100 rounded-0 bg-gradient">Message</Link>
                 </div>
+              </div>
             </div>
-            </div>
+          </div>
         ))}
       </div>
     </div>

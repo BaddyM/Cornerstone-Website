@@ -47,6 +47,7 @@ export default function RootLayout({ children }) {
             <ul className="top-header-links">
               {topHeaderLabel.map((e) => (
                 <Link
+                key={topHeaderLabel.indexOf(e)}
                   className="nav-link"
                   href={topHeaderLinks[topHeaderLabel.indexOf(e)]}
                 >
@@ -75,7 +76,7 @@ export default function RootLayout({ children }) {
             </button>
             <div className="collapse navbar-collapse" id="collapsibleNavId">
               <ul className="navbar-nav me-auto mt-2 mt-lg-0">
-                    {linkLabels.map((e)=><li className="nav-item"><Link className="nav-link" href={links[linkLabels.indexOf(e)]}>{e}</Link></li>)}
+                    {linkLabels.map((e)=><li className="nav-item"><Link key={linkLabels.indexOf(e)} className="nav-link" href={links[linkLabels.indexOf(e)]}>{e}</Link></li>)}
               </ul>
               <form className="d-flex my-2 my-lg-0">
                 <input
